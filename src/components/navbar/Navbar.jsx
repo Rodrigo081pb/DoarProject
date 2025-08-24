@@ -7,7 +7,7 @@ export default function Navbar() {
     const [open, setOpen] = useState(false);
 
     return (
-        <nav className="bg-white/95 dark:bg-black/80 shadow-md fixed w-full top-0 left-0 z-30 transition-colors duration-300">
+        <nav className="bg-white/95 dark:bg-black/80 shadow-md fixed w-full top-0 left-0 z-30 transition-colors duration-300" style={{ fontFamily: 'Poppins, sans-serif' }}>
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex justify-between h-16 items-center">
                     {/* Logo */}
@@ -18,10 +18,10 @@ export default function Navbar() {
 
                     {/* Links Desktop + Switch */}
                     <div className="hidden md:flex space-x-6 items-center">
-                        <a href="#" className="hover:text-gray-300">Home</a>
-                        <a href="#" className="hover:text-gray-300">Sobre</a>
-                        <a href="#" className="hover:text-gray-300">Serviços</a>
-                        <a href="#" className="hover:text-gray-300">Contato</a>
+                        <a href="#" className="hover:text-gray-300 text-gray-900 dark:text-white">Home</a>
+                        <a href="#" className="hover:text-gray-300 text-gray-900 dark:text-white">Sobre</a>
+                        <a href="#" className="hover:text-gray-300 text-gray-900 dark:text-white">Serviços</a>
+                        <a href="#" className="hover:text-gray-300 text-gray-900 dark:text-white">Contato</a>
                         <div className="ml-2 flex items-center h-full">
                             <div className="flex items-center justify-center h-full">
                                 <Switch small />
