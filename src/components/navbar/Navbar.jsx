@@ -1,0 +1,52 @@
+import { useState } from "react";
+import { HiMenu, HiX } from "react-icons/hi";
+import Logo from "../logo/Logo";
+import Switch from "../buttonTheme/ButtonTheme";
+
+export default function Navbar() {
+    const [open, setOpen] = useState(false);
+
+    return (
+        <nav className="bg-white/95 dark:bg-black/80 shadow-md fixed w-full top-0 left-0 z-30 transition-colors duration-300">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div className="flex justify-between h-16 items-center">
+                    {/* Logo */}
+                    <div className="flex-shrink-0">
+                        <Logo />
+                    </div>
+
+
+                    {/* Links Desktop + Switch */}
+                    <div className="hidden md:flex space-x-6 items-center">
+                        <a href="#" className="hover:text-gray-300">Home</a>
+                        <a href="#" className="hover:text-gray-300">Sobre</a>
+                        <a href="#" className="hover:text-gray-300">Serviços</a>
+                        <a href="#" className="hover:text-gray-300">Contato</a>
+                        <div className="ml-2 flex items-center h-full">
+                            <div className="flex items-center justify-center h-full">
+                                <Switch small />
+                            </div>
+                        </div>
+                    </div>
+
+                    {/* Botão Mobile */}
+                    <div className="md:hidden">
+                        <button onClick={() => setOpen(!open)}>
+                            {open ? <HiX size={28} /> : <HiMenu size={28} />}
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            {/* Menu Mobile */}
+            {open && (
+                <div className="md:hidden bg-blue-400 flex flex-col items-center text-center">
+                    <a href="#" className="block w-full px-4 py-2 hover:bg-blue-700">Home</a>
+                    <a href="#" className="block w-full px-4 py-2 hover:bg-blue-700">Sobre</a>
+                    <a href="#" className="block w-full px-4 py-2 hover:bg-blue-700">Serviços</a>
+                    <a href="#" className="block w-full px-4 py-2 hover:bg-blue-700">Contato</a>
+                </div>
+            )}
+        </nav>
+    );
+}
