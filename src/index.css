@@ -6,7 +6,7 @@
 body {
 	@apply bg-white dark:bg-black;
 	padding-top: 4rem; /* Compensa a altura da navbar fixa */
-	font-family: 'Poppins', sans-serif;
+	font-family: 'Poppins', sans-serif !important;
 }
 
 .main-content {
