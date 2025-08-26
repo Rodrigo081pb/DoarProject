@@ -33,7 +33,7 @@ const cards = [
 
 export default function OngsDestaqueSection() {
   return (
-  <section className="py-12 px-4 sm:px-8 lg:px-20 max-w-7xl mx-auto bg-[#f8f9fa]">
+  <section className="py-12 px-4 sm:px-8 lg:px-20 mx-auto bg-[#f8f9fa]">
       <CtaOngsDestaque />
       <div
         className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 mt-10 mx-auto justify-center items-stretch px-4 md:px-8"
