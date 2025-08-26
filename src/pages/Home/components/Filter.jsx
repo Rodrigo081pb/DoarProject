@@ -32,7 +32,7 @@ const Filter = () => {
   }, [estadoSelecionado]);
 
   return (
-  <div className="w-full max-w-[94%] md:max-w-4xl bg-white rounded-2xl shadow-lg p-4 md:p-10 flex flex-col items-center mx-auto">
+  <div className="w-full max-w-[94%] md:max-w-5xl bg-white rounded-2xl shadow-lg p-4 md:px-10 md:py-[38px] flex flex-col items-center mx-auto">
       <h2 className="text-2xl font-semibold text-center mb-6 text-gray-800">Encontre uma causa para apoiar</h2>
   <div className="flex flex-col md:flex-row w-full gap-y-2 md:gap-y-0 md:gap-x-6 items-stretch justify-center">
         <select
