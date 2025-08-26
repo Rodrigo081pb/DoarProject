@@ -1,6 +1,7 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useId } from 'react';
 import styled from 'styled-components';
 import { FaMoon, FaSun } from 'react-icons/fa';
+
 
 const Switch = ({ small }) => {
   const [dark, setDark] = useState(() => {
@@ -9,6 +10,7 @@ const Switch = ({ small }) => {
     }
     return false;
   });
+  const id = useId();
 
   useEffect(() => {
     if (dark) {
@@ -23,11 +25,11 @@ const Switch = ({ small }) => {
       <input
         type="checkbox"
         className="checkbox"
-        id="checkbox-theme-toggle"
+        id={`checkbox-theme-toggle-${id}`}
         checked={dark}
         onChange={() => setDark((v) => !v)}
       />
-      <label htmlFor="checkbox-theme-toggle" className="checkbox-label">
+      <label htmlFor={`checkbox-theme-toggle-${id}`} className="checkbox-label">
         <span className="icon sun">
           <svg width="38" height="38" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
             <circle cx="19" cy="19" r="10" fill="#FFD93B"/>
@@ -128,8 +130,14 @@ const ToggleWrapper = styled.div`
     opacity: 1;
   }
 
+  .checkbox + .checkbox-label .ball {
+    /* Estado inicial */
+    transform: translateX(0);
+    transition: transform 0.3s cubic-bezier(0.4,0,0.2,1), background 0.2s;
+  }
   .checkbox:checked + .checkbox-label .ball {
-    transform: translateX(${({ $small }) => ($small ? '32px' : '64px')});
+    /* Para small: largura do botão (60px) - largura da bola (28px) = 32px */
+    transform: ${({ $small }) => $small ? 'translateX(32px)' : 'translateX(64px)'};
   }
 `;
 

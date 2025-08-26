@@ -15,13 +15,12 @@ export default function Navbar() {
                         <Logo />
                     </div>
 
-
-                    {/* Links Desktop + Switch */}
                     <div className="hidden md:flex space-x-6 items-center">
                         <a href="#" className="hover:text-gray-300 text-gray-900 dark:text-white">Home</a>
                         <a href="#" className="hover:text-gray-300 text-gray-900 dark:text-white">Sobre</a>
-                        <a href="#" className="hover:text-gray-300 text-gray-900 dark:text-white">Serviços</a>
+                        <a href="#" className="hover:text-gray-300 text-gray-900 dark:text-white">Sou Ong</a>
                         <a href="#" className="hover:text-gray-300 text-gray-900 dark:text-white">Contato</a>
+
                         <div className="ml-2 flex items-center h-full">
                             <div className="flex items-center justify-center h-full">
                                 <Switch small />
@@ -29,10 +28,15 @@ export default function Navbar() {
                         </div>
                     </div>
 
-                    {/* Botão Mobile */}
-                    <div className="md:hidden">
+                    {/* Botão Mobile + Switch */}
+                    <div className="md:hidden flex items-center gap-2">
+                        <Switch small />
                         <button onClick={() => setOpen(!open)}>
-                            {open ? <HiX size={28} /> : <HiMenu size={28} />}
+                            {open ? (
+                                <HiX size={28} className="text-gray-900 dark:text-white" />
+                            ) : (
+                                <HiMenu size={28} className="text-gray-900 dark:text-white" />
+                            )}
                         </button>
                     </div>
                 </div>
