@@ -5,7 +5,7 @@ import groupIcon from "./imgs/icons/group.png";
 export default function CardOngs({ categoria, local, nome, descricao, apoiadores, imagem }) {
   return (
     <div
-  className="bg-white rounded-2xl shadow-sm flex flex-col overflow-hidden border border-gray-100 card-ongs group transition-all duration-300 ease-in-out hover:shadow-2xl hover:-translate-y-2 hover:scale-[1.025] w-full max-w-[290px] min-h-[370px] md:max-w-[320px] md:min-h-[400px]"
+      className="bg-white rounded-2xl shadow-sm flex flex-col overflow-hidden border border-gray-100 card-ongs group transition-all duration-300 ease-in-out hover:shadow-2xl hover:-translate-y-2 hover:scale-[1.025] w-full max-w-[305px] min-w-[224px] min-h-[370px] md:max-w-[336px] md:min-h-[400px]"
       style={{ display: 'flex', flexDirection: 'column' }}
     >
       <div className="relative w-full overflow-hidden" style={{ height: 130, flexShrink: 0 }}>
