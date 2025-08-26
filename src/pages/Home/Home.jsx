@@ -2,6 +2,7 @@ import React from "react";
 import Navbar from "../../components/navbar/Navbar";
 import FilterSection from "./components/FilterSection";
 import OngsDestaqueSection from "./components/OngsDestaqueSection/OngsDestaqueSection"
+import HelpSection from "./components/CanHelpSection/HelpSection"
 
 const Home = () => {
     return (
@@ -9,6 +10,7 @@ const Home = () => {
             <Navbar />
             <FilterSection />
             <OngsDestaqueSection />
+            <HelpSection />
         </>
     )
 }
