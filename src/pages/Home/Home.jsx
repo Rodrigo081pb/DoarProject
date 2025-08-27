@@ -3,6 +3,7 @@ import Navbar from "../../components/navbar/Navbar";
 import FilterSection from "./components/FilterSection/FilterSection";
 import OngsDestaqueSection from "./components/OngsDestaqueSection/OngsDestaqueSection"
 import HelpSection from "./components/CanHelpSection/HelpSection"
+import DifferenceSection from "./components/DifferenceSection/DifferenceSection"
 
 const Home = () => {
     return (
@@ -11,6 +12,7 @@ const Home = () => {
             <FilterSection />
             <OngsDestaqueSection />
             <HelpSection />
+            <DifferenceSection />
         </>
     )
 }
