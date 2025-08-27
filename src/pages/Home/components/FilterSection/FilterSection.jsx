@@ -1,7 +1,7 @@
 import React from "react";
-import ImageBackgroundFilter from "./ImageBackgroundFilter";
-import Filter from "./Filter";
-import CtaFilterSection from "./CtaFilterSection";
+import ImageBackgroundFilter from "./components/ImageBackgroundFilter";
+import Filter from "./components/Filter";
+import CtaFilterSection from "./components/CtaFilterSection";
 
 const FilterSection = () => {
     return (

@@ -1,7 +1,7 @@
 import React from "react";
-import CtaOngsDestaque from "./CtaSectionDestaque/CtaOngsDestaque";
-import CardOngs from "./CardOngs/CardOngs";
-import ButtonAllOngs from "./ButtonAllOngs/ButtonAllOngs";
+import CtaOngsDestaque from "./components/CtaSectionDestaque/CtaOngsDestaque";
+import CardOngs from "./components/CardOngs/CardOngs";
+import ButtonAllOngs from "./components/ButtonAllOngs/ButtonAllOngs";
 
 
 const cards = [

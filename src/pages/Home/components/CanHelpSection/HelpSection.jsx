@@ -13,7 +13,6 @@ const HelpSection = () => {
                     </div>
                 </div>
             </section>
-
         </>
     );
 };
