@@ -1,0 +1,24 @@
+import React from "react";
+
+/**
+ * Botões externos de navegação para o Swiper.
+ * Usam classes específicas que o Swiper associa via prop navigation.
+ */
+export function NavigationButtons() {
+  return (
+    <>
+      <button
+        aria-label="Anterior"
+        className="categories-prev group absolute left-5 top-1/2 -translate-y-1/2 z-20 h-11 w-11 rounded-full bg-white shadow-md ring-1 ring-slate-200 flex items-center justify-center text-slate-500 hover:text-blue-600 hover:shadow-lg hover:scale-105 transition-all"
+      >
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M15 18l-6-6 6-6" /></svg>
+      </button>
+      <button
+        aria-label="Próximo"
+        className="categories-next group absolute right-5 top-1/2 -translate-y-1/2 z-20 h-11 w-11 rounded-full bg-white shadow-md ring-1 ring-slate-200 flex items-center justify-center text-slate-500 hover:text-blue-600 hover:shadow-lg hover:scale-105 transition-all"
+      >
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M9 18l6-6-6-6" /></svg>
+      </button>
+    </>
+  );
+}

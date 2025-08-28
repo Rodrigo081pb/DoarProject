@@ -5,12 +5,14 @@ import OngsDestaqueSection from "./components/OngsDestaqueSection/OngsDestaqueSe
 import HelpSection from "./components/CanHelpSection/HelpSection"
 import DifferenceSection from "./components/DifferenceSection/DifferenceSection"
 import Footer from "../../components/footer/Footer";
+import CategoriesSection from "../Home/components/CategoriesSection/CategoriesSection"
 
 const Home = () => {
     return (
         <>
             <Navbar />
             <FilterSection />
+            <CategoriesSection />
             <OngsDestaqueSection />
             <HelpSection />
             <DifferenceSection />
