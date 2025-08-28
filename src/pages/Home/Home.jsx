@@ -4,6 +4,7 @@ import FilterSection from "./components/FilterSection/FilterSection";
 import OngsDestaqueSection from "./components/OngsDestaqueSection/OngsDestaqueSection"
 import HelpSection from "./components/CanHelpSection/HelpSection"
 import DifferenceSection from "./components/DifferenceSection/DifferenceSection"
+import Footer from "../../components/footer/Footer";
 
 const Home = () => {
     return (
@@ -13,6 +14,7 @@ const Home = () => {
             <OngsDestaqueSection />
             <HelpSection />
             <DifferenceSection />
+            <Footer />
         </>
     )
 }
