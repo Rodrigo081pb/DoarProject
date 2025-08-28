@@ -1,4 +1,5 @@
 import React from "react";
+import { useInView } from "../../../../hooks/useInView";
 import CtaOngsDestaque from "./components/CtaSectionDestaque/CtaOngsDestaque";
 import CardOngs from "./components/CardOngs/CardOngs";
 import ButtonAllOngs from "./components/ButtonAllOngs/ButtonAllOngs";
@@ -32,8 +33,12 @@ const cards = [
 ];
 
 export default function OngsDestaqueSection() {
+  const [sectionRef, isVisible] = useInView({ threshold: 0.2 });
   return (
-  <section className="py-12 px-4 sm:px-8 lg:px-20 mx-auto bg-[#f8f9fa]">
+    <section
+      ref={sectionRef}
+      className={`py-12 px-4 sm:px-8 lg:px-20 mx-auto bg-[#f8f9fa] ${isVisible ? "animate-slide-in-blur-bottom" : "opacity-0"}`}
+    >
       <CtaOngsDestaque />
       <div
         className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 mt-10 mx-auto justify-center items-stretch px-4 md:px-8"
