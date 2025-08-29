@@ -2,7 +2,7 @@ import { useState } from "react";
 import { HiMenu, HiX } from "react-icons/hi";
 import Logo from "../logo/Logo";
 import Switch from "../buttonTheme/ButtonTheme";
-
+import BaseButton from '../BaseButton';
 export default function Navbar() {
     const [open, setOpen] = useState(false);
 
@@ -18,7 +18,7 @@ export default function Navbar() {
                     <div className="hidden md:flex space-x-6 items-center">
                         <a href="#" className="hover:text-gray-300 text-gray-900 dark:text-white">Home</a>
                         <a href="#" className="hover:text-gray-300 text-gray-900 dark:text-white">Sobre</a>
-                        <a href="#" className="hover:text-gray-300 text-gray-900 dark:text-white">Sou Ong</a>
+                        <a href="#" className="hover:text-gray-300 text-gray-900 dark:text-white">Sou ONG</a>
                         <a href="#" className="hover:text-gray-300 text-gray-900 dark:text-white">Contato</a>
 
                         <div className="ml-2 flex items-center h-full">
@@ -31,13 +31,13 @@ export default function Navbar() {
                     {/* Botão Mobile + Switch */}
                     <div className="md:hidden flex items-center gap-2">
                         <Switch small />
-                        <button onClick={() => setOpen(!open)}>
+                        <BaseButton onClick={() => setOpen(!open)} size="md" variant="secondary" className="p-2">
                             {open ? (
                                 <HiX size={28} className="text-gray-900 dark:text-white" />
                             ) : (
                                 <HiMenu size={28} className="text-gray-900 dark:text-white" />
                             )}
-                        </button>
+                        </BaseButton>
                     </div>
                 </div>
             </div>

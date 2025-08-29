@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import BaseButton from '../../../../../components/BaseButton';
 
 const Filter = () => {
   const [estados, setEstados] = useState([]);
@@ -63,12 +64,12 @@ const Filter = () => {
   <select className="border rounded-lg px-4 py-1 text-gray-700 focus:outline-none focus:ring-2 focus:ring-purple-400 w-full md:w-80 shadow-sm bg-gray-100 text-gray-400" disabled>
           <option>Área de atuação</option>
         </select>
-  <button className="flex items-center gap-2 bg-purple-600 hover:bg-purple-700 text-white font-semibold px-6 py-1 rounded-lg transition-colors md:w-80 shadow-sm">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-5 h-5">
-            <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-4.35-4.35m0 0A7.5 7.5 0 104.5 4.5a7.5 7.5 0 0012.15 12.15z" />
-          </svg>
-          Buscar ONGs
-        </button>
+  <BaseButton size="md" variant="primary" className="flex items-center gap-2 md:w-80">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-5 h-5">
+      <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-4.35-4.35m0 0A7.5 7.5 0 104.5 4.5a7.5 7.5 0 0012.15 12.15z" />
+    </svg>
+    Buscar ONGs
+  </BaseButton>
       </div>
     </div>
   );
