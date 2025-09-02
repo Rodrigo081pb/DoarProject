@@ -1,8 +1,18 @@
 
 import React from "react";
 import { FaHandHoldingHeart } from "react-icons/fa";
+import { IoInformationCircleSharp } from 'react-icons/io5';
 
-export default function CardOngs({ categoria, local, nome, descricao, apoiadores, imagem }) {
+export default function CardOngs({ id, categoria, local, nome, descricao, apoiadores, imagem, whatsapp }) {
+    // Função para abrir WhatsApp da ONG
+    const handleDoeAgora = () => {
+        // Mocado: link direto para WhatsApp com mensagem padrão
+        window.open(`https://wa.me/${whatsapp}?text=Olá!%20Quero%20ajudar%20a%20ONG%20${encodeURIComponent(nome)}`, '_blank');
+    };
+    // Função para ir ao perfil da ONG (mocado)
+    const handleSaibaMais = () => {
+        window.location.href = `/perfil-ong/${id}`;
+    };
     return (
         <div
             className="relative rounded-3xl flex flex-col overflow-hidden card-ongs group transition-all duration-300 ease-in-out hover:shadow-xl hover:-translate-y-1 hover:scale-[1.02] w-full max-w-[320px] min-w-[224px] min-h-[370px] md:max-w-[350px] md:min-h-[400px] border border-gray-200/60 bg-white/60 backdrop-blur-lg"
@@ -26,7 +36,6 @@ export default function CardOngs({ categoria, local, nome, descricao, apoiadores
                 >
                     {categoria}
                 </span>
-                
             </div>
             <div
                 className="flex flex-col flex-1 p-6 justify-between"
@@ -49,9 +58,22 @@ export default function CardOngs({ categoria, local, nome, descricao, apoiadores
                     {descricao}
                 </p>
                 <div className="flex justify-center mt-2">
-                    <button className="bg-purple-700/90 hover:bg-purple-800/90 active:bg-purple-900/90 text-white font-medium py-2 px-6 rounded-full shadow-sm transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-purple-300 text-sm tracking-wide flex items-center gap-2 group/button">
+                    <button
+                        onClick={handleDoeAgora}
+                        className="bg-purple-700/90 hover:bg-purple-800/90 active:bg-purple-900/90 text-white font-medium py-2 px-6 rounded-full shadow-sm transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-purple-300 text-sm tracking-wide flex items-center gap-2 group/button"
+                    >
                         <span className="transition-transform duration-200 group-hover/button:-translate-y-0.5"><FaHandHoldingHeart className="text-base opacity-80" /></span>
                         Doe agora
+                    </button>
+                </div>
+                <div className="flex justify-center mt-2">
+                    <button
+                        onClick={handleSaibaMais}
+                        className="bg-purple-700/90 hover:bg-purple-800/90 active:bg-purple-900/90 text-white font-medium py-2 px-6 rounded-full shadow-sm transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-purple-300 text-sm tracking-wide flex items-center gap-2 group/button"
+                    >
+                        <span className="transition-transform duration-200 group-hover/button:-translate-y-0.5">
+                        <IoInformationCircleSharp className="text-base opacity-80" /></span>
+                        Saiba Mais
                     </button>
                 </div>
             </div>
