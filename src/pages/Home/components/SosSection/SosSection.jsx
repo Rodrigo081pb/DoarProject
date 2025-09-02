@@ -1,63 +1,55 @@
-
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
-import SosSectionHeader from "./components/SosSectionHeader";
-import SosCard from "./components/SosCard";
+import CtaSosEmergencia from "./components/CtaSosSection/CtaSosSection";
+import CardOngs from "./components/CardOngs/CardOngsSection";
+import { useInView } from "../../../../hooks/useInView";
 
-const ongsUrgentes = [
+
+const cards = [
   {
-    nome: "ONG Viva Bicho",
-    img: "https://images.unsplash.com/photo-1558788353-f76d92427f16",
-    status: "Emergência",
-    descricao: "Precisa urgentemente de ração e medicamentos para animais resgatados.",
-    link: "https://wa.me/5500000000000"
-  },
-  {
+    categoria: "Alimentação",
+    local: "São Paulo, SP",
     nome: "Ação Contra a Fome",
-    img: "https://images.unsplash.com/photo-1606788075761-6ec2e048fbe0",
-    status: "Necessidade Alta",
-    descricao: "Faltam cestas básicas para famílias atingidas por enchentes.",
-    link: "mailto:contato@acaocontrafome.org"
+    descricao: "Combatendo a insegurança alimentar através de programas de distribuição de alimentos e capacitação profissional.",
+    apoiadores: 1240,
+    imagem: "https://i.pinimg.com/736x/82/a3/3a/82a33a43be59e913b58efbdfd64e281e.jpg",
   },
   {
-    nome: "Educa Mais",
-    img: "https://images.unsplash.com/photo-1509062522246-3755977927d7",
-    status: "Emergência",
-    descricao: "Precisa de materiais escolares para crianças em situação de vulnerabilidade.",
-    link: "https://wa.me/5500000000000"
-  }
+    categoria: "Educação",
+    local: "Rio de Janeiro, RJ",
+    nome: "Instituto Educação Para Todos",
+    descricao: "Promovendo educação de qualidade e inclusão digital para crianças e jovens em situação de vulnerabilidade social.",
+    apoiadores: 892,
+    imagem: "https://i.pinimg.com/736x/82/a3/3a/82a33a43be59e913b58efbdfd64e281e.jpg",
+  },
+  {
+    categoria: "Animais",
+    local: "São Paulo, SP",
+    nome: "Proteção Animal São Paulo",
+    descricao: "Resgatamos e cuidamos de animais abandonados, proporcionando cuidados médicos e um lar temporário.",
+    apoiadores: 2156,
+    imagem: "https://i.pinimg.com/736x/82/a3/3a/82a33a43be59e913b58efbdfd64e281e.jpg",
+  },
 ];
 
-export default function SectionUrgencia() {
+export default function EmergenciaSection() {
+  const [sectionRef, isVisible] = useInView({ threshold: 0.2 });
   return (
-    <section className="relative py-16 bg-gradient-to-b from-slate-50 via-white to-slate-100 overflow-x-hidden">
-      <div className="max-w-7xl mx-auto px-4">
-        <SosSectionHeader />
-        <Swiper
-          modules={[Autoplay, Pagination]}
-          spaceBetween={24}
-          slidesPerView={1.1}
-          breakpoints={{
-            640: { slidesPerView: 2 },
-            1024: { slidesPerView: 3 },
-          }}
-          loop={true}
-          autoplay={{
-            delay: 3500,
-            disableOnInteraction: false,
-          }}
-          pagination={{ clickable: true }}
-          className="pb-12"
-        >
-          {ongsUrgentes.map((ong, i) => (
-            <SwiperSlide key={i}>
-              <SosCard ong={ong} />
-            </SwiperSlide>
-          ))}
-        </Swiper>
+    <section
+      ref={sectionRef}
+      className={`py-12 px-4 sm:px-8 lg:px-20 mx-auto bg-[#f8f9fa] ${isVisible ? "animate-slide-in-blur-bottom" : "opacity-0"}`}
+    >
+      <CtaSosEmergencia />
+      <div
+        className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 mt-10 mx-auto justify-center items-stretch px-4 md:px-8"
+        style={{ maxWidth: '1100px' }}
+      >
+        {cards.map((card, idx) => (
+          <CardOngs key={idx} {...card} />
+        ))}
       </div>
     </section>
   );
