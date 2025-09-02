@@ -6,12 +6,14 @@ import HelpSection from "./components/CanHelpSection/HelpSection"
 import DifferenceSection from "./components/DifferenceSection/DifferenceSection"
 import Footer from "../../components/footer/Footer";
 import CategoriesSection from "../Home/components/CategoriesSection/CategoriesSection"
+import SectionUrgencia from "./components/SosSection/SosSection";
 
 const Home = () => {
     return (
         <>
             <Navbar />
             <FilterSection />
+            <SectionUrgencia/>
             <CategoriesSection />
             <OngsDestaqueSection />
             <HelpSection />
