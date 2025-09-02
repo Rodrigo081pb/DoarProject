@@ -37,18 +37,19 @@ export default function OngsDestaqueSection() {
   return (
     <section
       ref={sectionRef}
-      className={`py-12 px-4 sm:px-8 lg:px-20 mx-auto bg-[#f8f9fa] ${isVisible ? "animate-slide-in-blur-bottom" : "opacity-0"}`}
+      className={`py-10 px-2 sm:px-4 md:px-8 lg:px-16 xl:px-32 2xl:px-0 mx-auto bg-[#f8f9fa] w-full ${isVisible ? "animate-slide-in-blur-bottom" : "opacity-0"}`}
+      style={{ maxWidth: '100vw', overflowX: 'hidden' }}
     >
       <CtaOngsDestaque />
       <div
-        className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 mt-10 mx-auto justify-center items-stretch px-4 md:px-8"
-        style={{ maxWidth: '1100px' }}
+        className="grid grid-cols-1 xs:grid-cols-2 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8 mt-8 sm:mt-10 mx-auto justify-center items-stretch w-full"
+        style={{ maxWidth: '1200px' }}
       >
         {cards.map((card, idx) => (
           <CardOngs key={idx} {...card} />
         ))}
       </div>
-      <div className="flex justify-center mt-8">
+      <div className="flex justify-center mt-6 sm:mt-8 w-full">
         <ButtonAllOngs />
       </div>
     </section>
