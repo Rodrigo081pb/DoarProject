@@ -3,6 +3,7 @@ import Home from '../pages/Home/Home';
 import Login from '../pages/Login/Login'
 import Register from '../pages/Register/Register'
 import EsqueceuSenha from '../pages/EsqueceuSenha/EsqueceuSenha'
+import ResetSenha from '../pages/ResetSenha/ResetSenha'
 
 export default function AppRoutes() {
   return (
@@ -12,6 +13,7 @@ export default function AppRoutes() {
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register/>} />
         <Route path="/esqueceu-senha" element={<EsqueceuSenha />} />
+        <Route path="/reset-senha" element={<ResetSenha />} />
       </Routes>
     </BrowserRouter>
   );

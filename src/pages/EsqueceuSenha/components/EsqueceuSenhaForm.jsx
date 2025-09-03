@@ -18,7 +18,7 @@ const EsqueceuSenhaForm = () => {
 
   return (
     <div className="bg-white bg-opacity-80 rounded-xl shadow-lg p-8 w-full max-w-md mx-auto">
-      <h2 className="text-2xl font-bold mb-6 text-center text-white-700">Recuperar Senha</h2>
+      <h2 className="text-2xl font-bold mb-6 text-center text-purple-600">Recuperar Senha</h2>
       {success ? (
         <div className="text-green-600 text-center">
           Um link de recuperação foi enviado para seu e-mail!
