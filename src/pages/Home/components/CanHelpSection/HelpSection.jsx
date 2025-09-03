@@ -7,6 +7,7 @@ const HelpSection = () => {
     const [sectionRef, isVisible] = useInView({ threshold: 0.2 });
     return (
         <section
+            id="help-section"
             ref={sectionRef}
             className={`py-7 mx-auto bg-indigo-600 ${isVisible ? "animate-slide-in-blur-bottom" : "opacity-0"}`}
         >
