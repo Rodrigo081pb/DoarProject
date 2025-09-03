@@ -19,7 +19,6 @@ export default function Navbar() {
                         <a href="#" className="hover:text-gray-300 text-gray-900 dark:text-white">Home</a>
                         <a href="#" className="hover:text-gray-300 text-gray-900 dark:text-white">Sobre</a>
                         <a href="#" className="hover:text-gray-300 text-gray-900 dark:text-white">Sou ONG</a>
-                        <a href="#" className="hover:text-gray-300 text-gray-900 dark:text-white">Contato</a>
 
                         <div className="ml-2 flex items-center h-full">
                             <div className="flex items-center justify-center h-full">
