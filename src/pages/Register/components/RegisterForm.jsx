@@ -192,8 +192,6 @@ const RegisterForm = () => {
                         <BaseButton type="submit" variant="primary" size="md">Enviar</BaseButton>
                     )}
                 </div>
-
-                {/* Mensagem de sucesso agora é exibida via alert e redirecionamento */}
             </form>
         </div>
     );
