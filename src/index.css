@@ -3,10 +3,14 @@
 @tailwind components;
 @tailwind utilities;
 
+
 body {
 	@apply bg-white dark:bg-black;
-	padding-top: 4rem; /* Compensa a altura da navbar fixa */
 	font-family: 'Poppins', sans-serif !important;
+}
+
+.with-navbar {
+	padding-top: 4rem; /* Compensa a altura da navbar fixa */
 }
 
 .main-content {
